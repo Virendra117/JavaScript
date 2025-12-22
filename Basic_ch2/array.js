@@ -97,7 +97,43 @@ flatMap()	            Map + Flat one level	            arr.flatMap(x => [x*2])
 
 
 let concatArray=fruitArray.concat(numberArray)
-console.log(concatArray); 
+// console.log(concatArray); 
+
+
+let strArr=["Virendra","Surendra","Shailendra","Devendra"]
+//console.log(strArr.reverse()); // [ 'Devendra', 'Shailendra', 'Surendra', 'Virendra' ]=>Array have reverse elements
+
+// console.log(Array.isArray([1,2,3]));
+// console.log(Array.of(1,2,3,"a","b"));
+
+let newstr="Virendra";
+//console.log(Array.from(newstr)); // ['V', 'i', 'r',  'e', 'n', 'd',  'r', 'a']
+
+
+
+
+
+let str=new Array("Virendra")
+//console.log(newstr.includes('ir')); // true =>Checks if value exists
+
+
+let nestedArray=[1,2,3,4,"a","b",[5,6,7],"c",[8,9,0]]
+console.log(nestedArray.flat(Infinity)); //Flattens nested arrays(all array convert into single array)
+
+console.log(nestedArray.flatMap(x=>[x*2])); //Map + Flat one level
+/*
+sabhi element me 2 ka multiply krna
+output:    [2,   4,   6,   8, NaN, NaN, NaN, NaN, NaN]
+*/
+
+
+console.log(nestedArray.fill(0));//Fills array with a value
+
+
+
+
+
+
 
 
 
