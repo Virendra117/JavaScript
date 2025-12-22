@@ -128,7 +128,10 @@ output:    [2,   4,   6,   8, NaN, NaN, NaN, NaN, NaN]
 
 
 console.log(nestedArray.fill(0));//Fills array with a value
+/*
+    output:[0, 0, 0, 0, 0,  0, 0, 0, 0]
 
+*/
 
 
 
