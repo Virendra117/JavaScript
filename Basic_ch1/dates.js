@@ -18,6 +18,12 @@ let myCreatedDate=new Date("2023-01-24")
 let myTimeStamp=Date.now()
 console.log(myTimeStamp); // result gives in mili second
 
+let myDateZone= new Date();
+console.log(myDateZone.toLocaleString('default',{
+    weekday:"long"
+}));
+
+
 
 
 
