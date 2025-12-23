@@ -16,20 +16,20 @@ const Person={
     isloggedInDays: ["Monday","Saturday","Tuesday"]
 }
 
-console.log(Person.name);
-console.log(Person["name"]);
-console.log(Person["full name"]);
-console.log(Person[mySymbol]);
+// console.log(Person.name);
+// console.log(Person["name"]);
+// console.log(Person["full name"]);
+// console.log(Person[mySymbol]);
 
 Person["full name"]="Virendra Kumar Sonwani"
-console.log(Person["full name"]);
+//console.log(Person["full name"]);
 
 // But We can freeze the Object means can't change the values of Object Properties
 
-Object.freeze(Person) // Now Freeze this object
+//Object.freeze(Person) // Now Freeze this object
 
 Person["full name"]="Shailendra Nigam"; // change value of ["Full Name"]
-console.log(Person);
+// console.log(Person);
 /*
  Output:
  {
@@ -44,6 +44,14 @@ console.log(Person);
 }
 
 */
+
+
+Person.message=function(){
+  console.log("Hello This is Messsage Passing.")
+}
+//console.log(Person.message); //[Function (anonymous)]
+console.log(Person.message());
+
 
 
 

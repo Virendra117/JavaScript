@@ -39,7 +39,7 @@ const monthString = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec";
 console.log(monthString.split(',').length) 
 
 
-//back tik ``
+//back tik `` is called string Interpullation
 // console.log(`${str1} is working with ${str}`);
 
 
