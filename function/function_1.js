@@ -37,5 +37,42 @@ for(let i=0;i<totalItemPrice.length;i++)
 }
  console.log(result);
 
+ //////////////////////////////////////////////
+
+ const user={
+    name:"Surendra",
+    price:199
+ }
+
+ function handelUser(userObject){
+    console.log(`Username is ${userObject.name} and course price is ${userObject.price}`)
+ }
+
+//  handelUser(user)
+
+
+///We can passing direct object like that
+
+handelUser({
+    name:"Surendra",
+    price:499
+})
+
+const myNewArrray=[200,300,400,600]
+
+function findMyArrayValue(getArray){
+    return getArray[2]
+}
+console.log(findMyArrayValue(myNewArrray)); // 400
+
+// now define dicrect array in function
+
+console.log(findMyArrayValue([100,300,500,600])); //500
+
+
+
+
+
+
 
 
