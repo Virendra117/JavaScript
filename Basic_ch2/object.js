@@ -121,11 +121,56 @@ const obj2={4:"d",5:"e", 6:"f"}
 // console.log(obj3.obj1[1]); // a is exist in obj1
 // console.log(obj3.obj2[5]); // e is exist in obj2
 
-
+//Object.assign(target,source) 
+/*
+  Note: source object se  value lega aur target me chali jaygi so
+  hum ek {} object as target use karte aur ab jitne chahe hum object source ke jaisa
+  use kar skte hai. like const obj4 = Object.assign({},obj1,obj2)
+*/ 
 const obj3 = Object.assign(obj1,obj2)
-console.log(obj3);
+// console.log(obj3);
 //{ '1': 'a', '2': 'b', '3': 'c', '4': 'd', '5': 'e', '6': 'f' }
 
+// sahi tarika => const obj3 = Object.assign({}, obj1,obj2)
+
+const obj4 = Object.assign({},obj1,obj2)
+// console.log(obj4);
+
+//{ '1': 'a', '2': 'b', '3': 'c', '4': 'd', '5': 'e', '6': 'f' }
+
+const obj5={...obj1, ...obj2} // ye bhi ek tarika hai
+//console.log(obj5);
+//{ '1': 'a', '2': 'b', '3': 'c', '4': 'd', '5': 'e', '6': 'f' }
+
+
+//obj={key:value}
+console.log(obj1);
+//{ '1': 'a', '2': 'b', '3': 'c', '4': 'd', '5': 'e', '6': 'f' }
+console.log(Object.keys(obj1))
+//[ '1', '2', '3', '4', '5', '6' ]
+console.log(Object.values(obj1))
+//[ 'a', 'b', 'c', 'd', 'e', 'f' ]
+
+
+console.log(Object.entries(obj1));
+
+/*
+  Output: Convert into Array with key and value i.e, [key,value]
+    [
+      [ '1', 'a' ],
+      [ '2', 'b' ],
+      [ '3', 'c' ],
+      [ '4', 'd' ],
+      [ '5', 'e' ],
+      [ '6', 'f' ]
+    ]
+
+
+
+*/
+
+console.log(Person.hasOwnProperty('name')); //check key and values
+//output: true =>means 'name' key is avialable in Person object
 
 
 
