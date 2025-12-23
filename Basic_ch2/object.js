@@ -46,11 +46,11 @@ Person["full name"]="Shailendra Nigam"; // change value of ["Full Name"]
 */
 
 
-Person.message=function(){
-  console.log("Hello This is Messsage Passing.")
-}
+// Person.message=function(){
+//   console.log("Hello This is Messsage Passing.")
+// }
 //console.log(Person.message); //[Function (anonymous)]
-console.log(Person.message());
+// console.log(Person.message());
 
 
 
@@ -70,7 +70,7 @@ tinderUser1.name="Virendra Sonwani"
 tinderUser1.email="viru@yopmail.com"
 tinderUser1.IsloggedIn=false
 
-console.log(tinderUser1);
+//console.log(tinderUser1);
 
 
 const userstemp={
@@ -86,7 +86,7 @@ const userstemp={
   IscollegeIN: false
 }
 
-console.log(userstemp);
+// console.log(userstemp);
 /*
   output:
     {
@@ -144,15 +144,15 @@ const obj5={...obj1, ...obj2} // ye bhi ek tarika hai
 
 
 //obj={key:value}
-console.log(obj1);
+// console.log(obj1);
 //{ '1': 'a', '2': 'b', '3': 'c', '4': 'd', '5': 'e', '6': 'f' }
-console.log(Object.keys(obj1))
+// console.log(Object.keys(obj1))
 //[ '1', '2', '3', '4', '5', '6' ]
-console.log(Object.values(obj1))
+// console.log(Object.values(obj1))
 //[ 'a', 'b', 'c', 'd', 'e', 'f' ]
 
 
-console.log(Object.entries(obj1));
+// console.log(Object.entries(obj1));
 
 /*
   Output: Convert into Array with key and value i.e, [key,value]
@@ -169,8 +169,31 @@ console.log(Object.entries(obj1));
 
 */
 
-console.log(Person.hasOwnProperty('name')); //check key and values
+// console.log(Person.hasOwnProperty('name')); //check key and values
 //output: true =>means 'name' key is avialable in Person object
+
+
+/////////////////////Object Destructuring////////////////////////////////////////
+
+const course={
+  courseID:"101",
+  courseName:".Net Full Stack",
+  Price: 15999,
+  courseTeacher:"Virendra Kumar",
+  IsActive:true
+}
+
+//Note: courseName ki value ko call karane ke liye 3 type se hai
+console.log(course.courseName);
+
+const {courseName}=course
+console.log(courseName);
+
+const {courseName:Teacher}=course
+console.log(Teacher);
+
+/////////////////////////////////////////////////////////
+
 
 
 
