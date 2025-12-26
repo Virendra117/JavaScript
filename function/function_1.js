@@ -64,11 +64,29 @@ function findMyArrayValue(getArray){
     return getArray[2]
 }
 console.log(findMyArrayValue(myNewArrray)); // 400
-
+///////////////////////////////////////////////////////////////////////////
 // now define dicrect array in function
 
 console.log(findMyArrayValue([100,300,500,600])); //500
 
+//deceleration of function
+function abc(num){
+    const number=num
+    return number
+}
+
+console.log(abc(4));
+
+
+// other decleration of funtion
+
+const abcTwo=function(num){
+    return num+6
+}
+
+console.log(abcTwo(4));
+
+/////////////////////////////////////////////////
 
 
 
