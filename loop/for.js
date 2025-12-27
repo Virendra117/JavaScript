@@ -24,10 +24,10 @@
 
 const  arr=[1,2,3,4,5,6]
 for (const index of arr) {
-    console.log(index)
+    //console.log(index)
 }
 
-console.log(index);
+//console.log(index);
 
 // loop
 // while, do-while, for, for-of, for-in
@@ -116,22 +116,30 @@ const map=new Map();
     map.set("AUS","AUSTRLIA")
     map.set("SL","SRI LANKA")
     map.set("IN","INDIA") // duplicate value
-//console.log(map);
+//  console.log(map);
+
 
 //map with key
+for (const key of map) {    
+    // console.log(key);    // result get in array format
+}
+//Note: Map() ko loop me nhi use kar sakte haai.
+
+
+//map with [key]
 for (const [key] of map) {    
-    //console.log(key);    
+    // console.log(key);    
 }
 
-//map with value
-for (const [value] of map) {    
-    //console.log(value);    
-}
+//map with [value]
+// for (const [value] of map) {    
+//     //console.log(value);    
+// }
 
-//map with key and value both
-for (const [key,value] of map) {    
-   // console.log(key, " :: ",value);    
-}
+// //map with key and value both
+// for (const [key,value] of map) {    
+//    // console.log(key, " :: ",value);    
+// }
 
 //////////////////////////////////////////////////
 
@@ -237,10 +245,64 @@ const mycoding=[
 
 const myNumber=[1,2,3,4,5,6,7,8,9,10]
 const NewMyNumber=myNumber.filter((num)=>num<9 && num>4)
-console.log(NewMyNumber);
+// console.log(NewMyNumber);
+
+/////////////////////////////////////////////////////////////////////////////////
+
+const Products=[
+    {"ID":101,"ProductName":"Computer","Price":1230000.00,"Active":1,"Quantity":25,"ProductImage":"user.jpg"},
+    {"ID":102,"ProductName":"Keyboard","Price":15000.00,"Active":1,"Quantity":24,"ProductImage":"user.jpg"},
+    {"ID":103,"ProductName":"Mouse","Price":12000.00,"Active":1,"Quantity":49,"ProductImage":"user.jpg"},
+    {"ID":104,"ProductName":"RAM","Price":180000.00,"Active":1,"Quantity":21,"ProductImage":"user.jpg"},
+    {"ID":105,"ProductName":"SSD","Price":25000.00,"Active":1,"Quantity":10,"ProductImage":"user.jpg"},
+    {"ID":106,"ProductName":"Laptop","Price":230000.00,"Active":1,"Quantity":25,"ProductImage":"user.jpg"},
+    {"ID":107,"ProductName":"Computer","Price":1230000.00,"Active":1,"Quantity":25,"ProductImage":"user.jpg"},
+    {"ID":109,"ProductName":"Computer RAM","Price":12000.00,"Active":1,"Quantity":25,"ProductImage":"user.jpg"},
+    {"ID":110,"ProductName":"Electric Heater","Price":2300.00,"Active":1,"Quantity":5,"ProductImage":"user.jpg"}
+    
+]
+
+// const userProducts=Products.filter((prod)=> prod.Price<50000)
+// console.log(userProducts)
+
+// const userProducts=Products.filter((prod)=> prod.Price<50000 && prod.ProductName=='Computer RAM')
+// console.log(userProducts)
+
+
+// userProducts=Products.filter((prod)=>{return prod.Price<3000})
+// console.log(userProducts)
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+// add 20 in each element in given array
+const mynums=[1,2,3,4,5,6,7,8,9,10]
+
+// const mynewNums=mynums.map((num)=>num+20)
+// console.log(mynewNums);
+
+/////////////////////use newsted map
+const mynewNums=mynums
+                .map((num)=>num*20)
+                .map((num)=> num+10)
+                .filter((num)=> num<100)
+    console.log(mynewNums);
+
+// mynums.forEach((num)=>{
+//     console.log(num+20);
+// })
 
 
 
+
+
+/*
+    output:
+    [
+        21, 22, 23, 24, 25,
+        26, 27, 28, 29, 30
+    ]
+
+*/
 
 
 
