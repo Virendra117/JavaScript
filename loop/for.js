@@ -285,7 +285,7 @@ const mynewNums=mynums
                 .map((num)=>num*20)
                 .map((num)=> num+10)
                 .filter((num)=> num<100)
-    console.log(mynewNums);
+    // console.log(mynewNums);
 
 // mynums.forEach((num)=>{
 //     console.log(num+20);
@@ -303,6 +303,56 @@ const mynewNums=mynums
     ]
 
 */
+
+//////////////////////////////////////////////
+//use of reduce in loop
+const array = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+// console.log(sumWithInitial);
+// Expected output: 10
+
+
+
+// const myArray=[1,2,3,4,5]
+
+// const myNewArray=myArray.reduce(function (acc, currVal){
+//     console.log(`acc ${acc} and currVal ${currVal}`);
+//     return acc+currVal    
+// },3)
+
+//////////////////////////////////////////////////
+//use product object from above given
+
+const NewProducts=[
+    {"ID":101,"ProductName":"Computer","Price":1230000.00,"Active":1,"Quantity":25,"ProductImage":"user.jpg"},
+    {"ID":102,"ProductName":"Keyboard","Price":15000.00,"Active":1,"Quantity":24,"ProductImage":"user.jpg"},
+    {"ID":103,"ProductName":"Mouse","Price":12000.00,"Active":1,"Quantity":49,"ProductImage":"user.jpg"},
+    {"ID":104,"ProductName":"RAM","Price":180000.00,"Active":1,"Quantity":21,"ProductImage":"user.jpg"},
+    {"ID":105,"ProductName":"SSD","Price":25000.00,"Active":1,"Quantity":10,"ProductImage":"user.jpg"},
+    {"ID":106,"ProductName":"Laptop","Price":230000.00,"Active":1,"Quantity":25,"ProductImage":"user.jpg"},
+    {"ID":107,"ProductName":"Computer","Price":1230000.00,"Active":1,"Quantity":25,"ProductImage":"user.jpg"},
+    {"ID":109,"ProductName":"Computer RAM","Price":12000.00,"Active":1,"Quantity":25,"ProductImage":"user.jpg"},
+    {"ID":110,"ProductName":"Electric Heater","Price":2300.00,"Active":1,"Quantity":5,"ProductImage":"user.jpg"}
+    
+]
+const ProductPrice=NewProducts.map((item)=>(item.Price))
+const initialProductPrice=ProductPrice[0];
+const ProductTotalPrice=ProductPrice.reduce((acc,currVal)=>{
+    return (acc + currVal)
+},initialProductPrice)
+console.log(ProductTotalPrice);
+
+
+
+
+
 
 
 
